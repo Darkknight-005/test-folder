@@ -1,0 +1,20 @@
+#section2 >div:nth-child(2) >ul >li > a , #section3 >div:nth-child(2) >ul >li > a {
+    background: rgba(0, 0, 0, 0.2);
+    outline-offset: 2rem;
+}
+#section2 >div:nth-child(2) >ul >li > a:hover , #section3 >div:nth-child(2) >ul >li > a:hover{
+    background: rgba(255, 255, 255, 0.7);
+    color: rgba(0, 0, 0);
+}
+
+
+#hlist >ul>li > a{
+    background: rgba(0, 0, 0, 0.2);
+    outline-offset: 2rem;
+
+}
+#hlist >ul>li > a:hover{
+    background: rgba(255, 255, 255, 0.7);
+    color: rgba(0, 0, 0);
+}
+
