@@ -17,7 +17,7 @@ function Header() {
 
                 <span>
                     <p className='flex items-center text-2xl'>Linked
-                        <GiLinkedRings className='ml-[2px] -mb-[3px] text-3xl text-[#78706c] font-extralight' />
+                        <GiLinkedRings className='ml-[2px] -mb-[3px] text-3xl text-[lightsalmon] font-extralight' />
                         {/* <img src={Linked} className="w-8 backdrop-blur-sm bg-brightness-150 bg-inherit rounded-full" alt="" /> */}
                     </p>
                 </span>
