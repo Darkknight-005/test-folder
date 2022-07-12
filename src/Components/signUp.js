@@ -16,7 +16,7 @@ function SignUp() {
                 </span>
     </header>
         <main className=' flex flex-col gap-10 items-center justify-center text-slate-300 '>
-            <form action="" method="post" className='lg:w-[30vw] flex-none md:w-[40vw] sm:w-[50vw] w-[70vw]  h-[55vh] flex flex-col justify-start text-center px-10 py-5 gap-y-2 backdrop-blur-md bg-white/20 cursor-default rounded  mx-10'>
+            <form action="" method="post" className='lg:w-[30vw] flex-none md:w-[40vw] sm:w-[50vw] w-[70vw]   flex flex-col justify-start text-center px-10 py-5 gap-y-2 backdrop-blur-md bg-white/20 cursor-default rounded  mx-10'>
                 <h3 className='text-2xl my-5  text-white brightness-200 '>Make the most of your professional life</h3>
                     <div className="w-60 flex bg-black/30 rounded-sm px-2   self-center py-2">
                     <input className='flex-1 bg-transparent placeholder-gray-200 text-sm outline-none  ' type="email" placeholder='E-mail or Phone number'  /> <br />

@@ -1,5 +1,5 @@
 import Landing_page from './Components/landing_page';
-import { HashRouter as Router, Routes, Route} from "react-router-dom"
+import { HashRouter, Routes, Route} from "react-router-dom"
 import SignUp from './Components/signUp';
 
 // import logo from './logo.svg';
@@ -7,7 +7,7 @@ import SignUp from './Components/signUp';
 
 function App() {
   return (
-    <Router>
+    <HashRouter >
 
       <Routes>
       <Route exact path="/" element={<Landing_page />} />
@@ -15,7 +15,7 @@ function App() {
 
       </Routes>
 
-    </Router>
+    </HashRouter>
     // <SignUp />
   );
 }
