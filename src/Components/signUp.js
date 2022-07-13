@@ -18,7 +18,7 @@ function SignUp() {
 
     </header>
         <main className=' my-5 flex flex-col gap items-center justify-center text-slate-300  '>
-            <form action="" method="post" className='lg:w-[30vw] flex-none md:w-[40vw] sm:w-[70vw] w-full flex flex-col justify-start text-center px-10 pt-5 pb-10 gap-y-2 backdrop-blur-md bg-black/30 cursor-default rounded  mx-10'>
+            <form action="" method="post" className=' lg:w-[30vw] flex-none md:w-[40vw] sm:w-[70vw] w-auto flex flex-col justify-start text-center px-10 pt-5 pb-10 gap-y-2 backdrop-blur-md bg-black/30 cursor-default rounded  mx-10'>
                 <h3 className='text-2xl my-5  text-white brightness-200 '>Make the most of your professional life</h3>
                     <div className="w-60 flex bg-black/30 rounded-sm px-2   self-center py-2">
                     <input className='flex-1 bg-transparent placeholder-gray-200 text-sm outline-none  ' type="email" placeholder='E-mail or Phone number'  /> <br />
