@@ -1,0 +1,59 @@
+"general configration option
+set nocompatible
+set backspace=indent,eol,start
+set showcmd
+set history=1000
+set showmode
+set autoread
+set hidden
+"user interface option
+set ruler
+set wildmenu
+set tabpagemax=40
+highlight cursorline guibg=black ctermbg=white
+colorscheme desert
+set nu
+set cursorline
+set noerrorbells
+set visualbell
+set relativenumber
+set mouse=a
+set background=light
+set title
+"swap and backups
+set noswapfile
+set nobackup
+set nowb
+"indentation option
+set autoindent
+filetype plugin indent on
+set tabstop=4 softtabstop=4
+set shiftwidth=4
+"atuo completion
+set complete+=kspell
+set completeopt=preview,menuone,longest
+
+call plug#begin()
+
+Plug 'vim-script/AutoComplPop' "auto complete
+Plug 'http://github.com/tpope/vim-surround' " Surrounding ysw)
+Plug 'https://github.com/preservim/nerdtree' " NerdTree
+Plug 'https://github.com/tpope/vim-commentary' " For Commenting gcc & gc
+Plug 'https://github.com/ap/vim-css-color' " CSS Color Preview
+Plug 'https://github.com/rafi/awesome-vim-colorschemes' " Retro Scheme
+Plug 'https://github.com/ryanoasis/vim-devicons' " Developer Icons
+Plug 'https://github.com/preservim/tagbar' " Tagbar for code navigation
+Plug 'https://github.com/terryma/vim-multiple-cursors' " CTRL + N for multiple cursors
+Plug 'https://github.com/vim-airline/vim-airline/' "status bar
+Plug 'https://github.com/vim-airline/vim-airline-themes/' "status bar
+
+
+call plug#end()
+
+nnoremap <c-t> :NERDTreeToggle <cr>
+nnoremap <c-r> :NERDTreeFocus <cr>
+nnoremap <c-n> :NERDTree <cr>
+
+let g:NERDTreeDirArrowExpandable = '>'
+let g:NERDTreeDirArrowColapsible = '-'
+
