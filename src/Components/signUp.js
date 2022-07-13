@@ -1,5 +1,5 @@
 import React from 'react'
-import "./form.css"
+import "./signup.css"
 import { Link } from 'react-router-dom'
 import Footer from './tools/Footer'
 import { GiLinkedRings } from 'react-icons/gi'
@@ -8,7 +8,16 @@ import {FcGoogle} from "react-icons/fc"
 
 function SignUp() {
   return (
-    <div>        <main className=' flex flex-col gap items-center justify-center text-slate-300 bg-black '>
+    <div className='h-screen flex flex-col justify-between  backdrop-blur-3xl backdrop-brightness-150 bg-black/30'>        
+    <header className='flex items-center justify-center py-2 backdrop-blur-lg backdrop-brightness-150 bg-black/60 text-slate-100 z-10'>
+        <div className='flex items-center gap-2 text-2xl '>
+        Linked
+        <GiLinkedRings className='text-[lightsalmon]'/>
+
+        </div>
+
+    </header>
+        <main className=' my-5 flex flex-col gap items-center justify-center text-slate-300  '>
             <form action="" method="post" className='lg:w-[30vw] flex-none md:w-[40vw] sm:w-[70vw] xs:w-[90vw]  flex flex-col justify-start text-center px-10 pt-5 pb-10 gap-y-2 backdrop-blur-md bg-white/20 cursor-default rounded  mx-10'>
                 <h3 className='text-2xl my-5  text-white brightness-200 '>Make the most of your professional life</h3>
                     <div className="w-60 flex bg-black/30 rounded-sm px-2   self-center py-2">
@@ -30,7 +39,7 @@ function SignUp() {
             </form>
 
         </main>
-            <div className='bg-black '>
+            <div className='bg-black  w-full'>
                 <Footer />
             </div>
         </div>
