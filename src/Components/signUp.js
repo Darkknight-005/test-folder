@@ -27,14 +27,14 @@ function SignUp() {
                     <input  className='placeholder-gray-300 text-sm flex-1 bg-transparent outline-none ' type="passWord" placeholder='Password' /> <br />
                     </div>
                     <p className=' text-xs w-56 self-center text-gray-300'>By clicking Agree & Join, you agree to the Linkedin
-                        <Link to="/User Agreement" className='text-black/40 font-bold ml-1'>User Agreement</Link>,
-                        <Link to="Privacy Policy" className='text-black/40 font-bold ml-1'>Privacy Policy</Link>, and
-                        <Link to="Privacy Policy" className='text-black/40 font-bold ml-1'>Cookie Policy</Link>.
+                        <Link to="/User Agreement" className='text-blue-500/90 font-semibold ml-1'>User Agreement</Link>,
+                        <Link to="Privacy Policy" className='text-blue-500/90 font-semibold ml-1'>Privacy Policy</Link>, and
+                        <Link to="Privacy Policy" className='text-blue-500/90 font-semibold ml-1'>Cookie Policy</Link>.
                     </p>
                     <button className='mt-3 mb-2 py-1 px-2 w-52 self-center bg-gradient-to-tl to-violet-700 from-gray-700 hover:from-violet-800 hover:to-gray-700 rounded-full text-gray-400 hover:brightness-200 brightness-150'>Sign-up</button> 
                     <button className='rounded-full py-1 w-52 self-center bg-gradient-to-tl to-violet-700 from-gray-700 hover:from-violet-800 hover:to-gray-700  text-gray-400 hover:brightness-200 brightness-150 flex items-center gap-2 px-3 '><FcGoogle /> Continue with Google</button> 
 
-                    <span> Already on Linkedin? <Link to="/signIn" className='text-black/40 font-bold'>Sign in</Link> </span>
+                    <span> Already on Linkedin? <Link to="/signIn" className='text-blue-500/90 font-semibold'>Sign in</Link> </span>
 
             </form>
 
