@@ -33,7 +33,7 @@ function Header() {
                 <span className='rotate-90 text-lg -mx-3  flex -space-x-1 justify-center'><AiOutlineLine /><AiOutlineLine /></span>
             </div>
             <span> <Link to="/sign-up" >Join now</Link></span>
-            <button className='outline-1 outline-double outline-slate-300  rounded-3xl px-4 pb-1 mt-1'>Sign up</button>
+            <button className='outline-1 outline-double outline-slate-300  rounded-3xl px-4 pb-1 mt-1'> <Link to="/feed"> Sign up </Link> </button>
         </div>
     </div>
 </header>
