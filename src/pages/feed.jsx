@@ -78,10 +78,26 @@ function Feed() {
           </div>
         </div>
       </header>
-      <main className='h-[200vh] flex  justify-center'>
-        <section className='lg:w-[1028px] text-center'>
-          <h1 className='text-2xl text-gray-200 font-serif'>
-            Demo text heading
+      <main className='min-h-full flex flex-col gap-2 mt-2 items-center'>
+        <section className='lg:w-[1028px] text-justify'>
+          <h1 className='text-2xl text-red-300 font-serif text-center'>
+            This is first
+          </h1>
+          <p className='text-gray-400 font-sans'>
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Rerum quis sunt facilis error quidem earum reiciendis, laboriosam iure minima, maxime iste sequi omnis optio placeat ducimus dolorum vero voluptas! Explicabo consectetur aliquam natus recusandae minus ipsa, ad dicta rem nesciunt unde perferendis amet magni quam molestiae. Repellendus ex facere aliquam velit debitis tenetur quod atque vitae nemo dolores in cumque doloremque excepturi eum at ratione dolore aspernatur beatae ipsa minus voluptatum ducimus, nostrum illo libero. Sed ipsa quae minima incidunt officiis modi aperiam perspiciatis blanditiis consectetur sit qui expedita repellendus ducimus provident adipisci voluptatum, nemo temporibus nisi rerum nam eum!
+          </p>
+        </section>
+        <section className='lg:w-[1028px] text-justify'>
+          <h1 className='text-2xl text-green-200 font-serif text-center'>
+            This is Second section
+          </h1>
+          <p className='text-gray-400 font-sans'>
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Rerum quis sunt facilis error quidem earum reiciendis, laboriosam iure minima, maxime iste sequi omnis optio placeat ducimus dolorum vero voluptas! Explicabo consectetur aliquam natus recusandae minus ipsa, ad dicta rem nesciunt unde perferendis amet magni quam molestiae. Repellendus ex facere aliquam velit debitis tenetur quod atque vitae nemo dolores in cumque doloremque excepturi eum at ratione dolore aspernatur beatae ipsa minus voluptatum ducimus, nostrum illo libero. Sed ipsa quae minima incidunt officiis modi aperiam perspiciatis blanditiis consectetur sit qui expedita repellendus ducimus provident adipisci voluptatum, nemo temporibus nisi rerum nam eum!
+          </p>
+        </section>
+        <section className='lg:w-[1028px] text-justify'>
+          <h1 className='text-2xl text-violet-300 font-serif text-center'>
+            This is Third section
           </h1>
           <p className='text-gray-400 font-sans'>
             Lorem ipsum dolor, sit amet consectetur adipisicing elit. Rerum quis sunt facilis error quidem earum reiciendis, laboriosam iure minima, maxime iste sequi omnis optio placeat ducimus dolorum vero voluptas! Explicabo consectetur aliquam natus recusandae minus ipsa, ad dicta rem nesciunt unde perferendis amet magni quam molestiae. Repellendus ex facere aliquam velit debitis tenetur quod atque vitae nemo dolores in cumque doloremque excepturi eum at ratione dolore aspernatur beatae ipsa minus voluptatum ducimus, nostrum illo libero. Sed ipsa quae minima incidunt officiis modi aperiam perspiciatis blanditiis consectetur sit qui expedita repellendus ducimus provident adipisci voluptatum, nemo temporibus nisi rerum nam eum!
@@ -89,7 +105,7 @@ function Feed() {
         </section>
       </main>
 
-      <nav id='mobile_nav' className='flex-1 flex justify-evenly pb-2 sticky bottom-0 z-10'>
+      <nav id='mobile_nav' className='backdrop-blur-lg bg-black/40 flex-1 flex justify-evenly py-[6px] sticky bottom-0 z-10'>
         <div className='flex space-x-3 flex-1  justify-evenly text-gray-400' id='nav_i'>
 
           <div className='flex flex-col items-center   py-1 '>
