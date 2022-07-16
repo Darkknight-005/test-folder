@@ -1,6 +1,4 @@
-#p_flex_i{
-    display: none;
-}
+
 
 
 
@@ -16,7 +14,18 @@
     #search{
         flex:0.6 ;
     }
-    
+
+    #sms{
+        display: none;
+    }
+    #p_flex_i{
+        display: none;        
+    }    
+    #nav_i >div {
+        
+        cursor: pointer;
+
+    }    
 }
 
 
@@ -24,9 +33,11 @@
 @media (min-width:790px) {
     #s_me , #noti{
         display: none;
+        
     }    
     #p_flex_i{
         display: inline-flex;
+
     }
     #h_main {
         justify-content: start;
@@ -37,5 +48,13 @@
 
     #flex_icon>div>div{
         cursor: pointer;
+    }
+    #mobile_nav{
+        display: none;
+    }
+
+
+    #post{
+        display: none;
     }
 }
