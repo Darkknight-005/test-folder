@@ -1,7 +1,7 @@
-import Landing_page from './Components/landing_page';
+import Landing_page from './pages/landing_page';
 import { HashRouter, Routes, Route} from "react-router-dom"
-import SignUp from './Components/signUp';
-import Feed from './Components/feed.jsx';
+import SignUp from './pages/signUp';
+import Feed from './pages/feed.jsx';
 
 function App() {
   return (

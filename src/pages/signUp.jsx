@@ -1,7 +1,7 @@
 import React from 'react'
-import "./signup.css"
+import "./css/signup.css"
 import { Link } from 'react-router-dom'
-import Footer from './tools/Footer'
+import Footer from '../Components/Footer'
 import { GiLinkedRings } from 'react-icons/gi'
 import { MdFaceRetouchingOff } from 'react-icons/md'
 import {FcGoogle} from "react-icons/fc"

@@ -1,11 +1,12 @@
 import React from 'react'
-import "./form.css"
-import sec5 from './img/sec5.png'
-import Linked from './img/linkedin.svg'
-import section_1 from './img/section_1.jpeg'
+import "./css/form.css"
+import sec5 from '../img/sec5.png'
+import Linked from '../img/linkedin.svg'
+import section_1 from '../img/section_1.jpeg'
 import { BsChevronCompactDown, BsChevronCompactUp } from 'react-icons/bs'
-import Header from './tools/header'
-import Footer from './tools/Footer'
+import {FcGoogle } from "react-icons/fc"
+import Header from '../Components/header'
+import Footer from '../Components/Footer'
 
 
 function Landing_page() {
@@ -17,21 +18,21 @@ function Landing_page() {
         let pass = document.getElementById('pass')
         pass.setAttribute('type', 'password')
     }
-    const hlist = ()=>{
+    const hlist = () => {
         let hl = document.getElementById('hlist')
-        let fire = (hl.style.display === 'none') ? 'block':'none'
+        let fire = (hl.style.display === 'none') ? 'block' : 'none'
         hl.style.display = fire;
         let show = document.getElementById('show')
-        const more = (hl.style.display === 'none') ? `Show more `:`Show less`
+        const more = (hl.style.display === 'none') ? `Show more ` : `Show less`
         show.innerText = more;
     }
-    
+
 
     return (
         < >
             <div className='bg-gradient-to-br to-black/80 via-blue-900/90 from-purple-900/80 backdrop-blur-3xl backdrop-brightness-150 bg-black/30 '>
                 <Header />
-                
+
                 <main className='flex flex-col gap-10 items-center text-slate-300 ' >
 
                     <section className='space-y-5 lg:space-y-0 flex flex-col lg:flex-row items-center lg:py-5 py-3 lg:w-[1128px] ' id="section1">
@@ -53,7 +54,8 @@ function Landing_page() {
                                     </div>
                                 </div>
                                 <a href="#">Forgot Password ?</a>
-                                <button className='bg-gradient-to-tl to-violet-700 from-gray-700 hover:from-violet-800 hover:to-gray-700 rounded text-gray-400 hover:brightness-200 brightness-150 w-56 self-center py-1  '>Sign-in</button>
+                                <button className='bg-gradient-to-tl to-violet-700 from-gray-700 hover:from-violet-800 hover:to-gray-700 rounded-full text-gray-400 hover:brightness-200 brightness-150 w-56 self-center py-1  '>Sign-in</button>
+                                <button className='flex items-center justify-center gap-1 bg-gradient-to-tl to-violet-700 from-gray-700 hover:from-violet-800 hover:to-gray-700 rounded-full text-gray-400 hover:brightness-200 brightness-150 w-56 self-center py-1  '><FcGoogle /> Continue with Google</button>
                             </form>
                         </div>
                         <img src={section_1} alt="" className=' h-72 lg:h-auto lg:w-1/2 ' />
@@ -129,72 +131,72 @@ function Landing_page() {
                                 </li>
                                 <li>
                                     <a href="#" className='border border-slate-300 rounded-full py-2 px-3'>Human Resources</a>
-                                </li> 
-                                <li className='hidden' id="hlist">                                
-                                <ul className='flex justify-start gap-y-5 gap-x-2 flex-wrap' >
-                                <li>
-                                    <a href="#" className='border border-slate-300 rounded-full py-2 px-3'>Healthcare Service</a>
                                 </li>
-                                <li>
-                                    <a href="#" className='border border-slate-300 rounded-full py-2 px-3'>Sales</a>
-                                </li>
-                                <li>
-                                    <a href="#" className='border border-slate-300 rounded-full py-2 px-3'>Program and Project Management</a>
-                                </li>
-                                <li>
-                                    <a href="#" className='border border-slate-300 rounded-full py-2 px-3'>Accounting</a>
-                                </li>
-                                <li>
-                                    <a href="#" className='border border-slate-300 rounded-full py-2 px-3'>Art and Design</a>
-                                </li>
-                                <li>
-                                    <a href="#" className='border border-slate-300 rounded-full py-2 px-3'>Community and Social Service</a>
-                                </li>
-                                <li>
-                                    <a href="#" className='border border-slate-300 rounded-full py-2 px-3'>Consulting</a>
-                                </li>
-                                <li>
-                                    <a href="#" className='border border-slate-300 rounded-full py-2 px-3'>Education</a>
-                                </li>
-                                <li>
-                                    <a href="#" className='border border-slate-300 rounded-full py-2 px-3'>Entreprenurship</a>
-                                </li>
-                                <li>
-                                    <a href="#" className='border border-slate-300 rounded-full py-2 px-3'>Legal</a>
-                                </li>
-                                <li>
-                                    <a href="#" className='border border-slate-300 rounded-full py-2 px-3'>Media and Communication</a>
-                                </li>
-                                <li>
-                                    <a href="#" className='border border-slate-300 rounded-full py-2 px-3 flex-1'>Military and Protective Services</a>
-                                </li>
-                                <li>
-                                    <a href="#" className='border border-slate-300 rounded-full py-2 px-3'>Product Management</a>
-                                </li>
-                                <li>
-                                    <a href="#" className='border border-slate-300 rounded-full py-2 px-3'>Purchasing</a>
-                                </li>
-                                <li>
-                                    <a href="#" className='border border-slate-300 rounded-full py-2 px-3'>Quality Assurance</a>
-                                </li>
-                                <li>
-                                    <a href="#" className='border border-slate-300 rounded-full py-2 px-3'>Real Estate</a>
-                                </li>
-                                <li>
-                                    <a href="#" className='border border-slate-300 rounded-full py-2 px-3'>Research</a>
-                                </li>
-                                <li>
-                                    <a href="#" className='border border-slate-300 rounded-full py-2 px-3'>Support</a>
-                                </li>
-                                <li>
-                                    <a href="#" className='border border-slate-300 rounded-full py-2 px-3'>Administrative</a>
-                                </li>
-                                </ul>
+                                <li className='hidden' id="hlist">
+                                    <ul className='flex justify-start gap-y-5 gap-x-2 flex-wrap' >
+                                        <li>
+                                            <a href="#" className='border border-slate-300 rounded-full py-2 px-3'>Healthcare Service</a>
+                                        </li>
+                                        <li>
+                                            <a href="#" className='border border-slate-300 rounded-full py-2 px-3'>Sales</a>
+                                        </li>
+                                        <li>
+                                            <a href="#" className='border border-slate-300 rounded-full py-2 px-3'>Program and Project Management</a>
+                                        </li>
+                                        <li>
+                                            <a href="#" className='border border-slate-300 rounded-full py-2 px-3'>Accounting</a>
+                                        </li>
+                                        <li>
+                                            <a href="#" className='border border-slate-300 rounded-full py-2 px-3'>Art and Design</a>
+                                        </li>
+                                        <li>
+                                            <a href="#" className='border border-slate-300 rounded-full py-2 px-3'>Community and Social Service</a>
+                                        </li>
+                                        <li>
+                                            <a href="#" className='border border-slate-300 rounded-full py-2 px-3'>Consulting</a>
+                                        </li>
+                                        <li>
+                                            <a href="#" className='border border-slate-300 rounded-full py-2 px-3'>Education</a>
+                                        </li>
+                                        <li>
+                                            <a href="#" className='border border-slate-300 rounded-full py-2 px-3'>Entreprenurship</a>
+                                        </li>
+                                        <li>
+                                            <a href="#" className='border border-slate-300 rounded-full py-2 px-3'>Legal</a>
+                                        </li>
+                                        <li>
+                                            <a href="#" className='border border-slate-300 rounded-full py-2 px-3'>Media and Communication</a>
+                                        </li>
+                                        <li>
+                                            <a href="#" className='border border-slate-300 rounded-full py-2 px-3 flex-1'>Military and Protective Services</a>
+                                        </li>
+                                        <li>
+                                            <a href="#" className='border border-slate-300 rounded-full py-2 px-3'>Product Management</a>
+                                        </li>
+                                        <li>
+                                            <a href="#" className='border border-slate-300 rounded-full py-2 px-3'>Purchasing</a>
+                                        </li>
+                                        <li>
+                                            <a href="#" className='border border-slate-300 rounded-full py-2 px-3'>Quality Assurance</a>
+                                        </li>
+                                        <li>
+                                            <a href="#" className='border border-slate-300 rounded-full py-2 px-3'>Real Estate</a>
+                                        </li>
+                                        <li>
+                                            <a href="#" className='border border-slate-300 rounded-full py-2 px-3'>Research</a>
+                                        </li>
+                                        <li>
+                                            <a href="#" className='border border-slate-300 rounded-full py-2 px-3'>Support</a>
+                                        </li>
+                                        <li>
+                                            <a href="#" className='border border-slate-300 rounded-full py-2 px-3'>Administrative</a>
+                                        </li>
+                                    </ul>
 
                                 </li>
                             </ul>
-                            <span className='flex gap-2 items-center w-fit text-base cursor-pointer' onClick={hlist} id="dshow"> <p >Show more</p> <BsChevronCompactDown className='mt-1 font-bold' id='show'/>
-                            <BsChevronCompactUp className='hidden mt-1 font-bold' id='show'/></span>
+                            <span className='flex gap-2 items-center w-fit text-base cursor-pointer' onClick={hlist} id="dshow"> <p >Show more</p> <BsChevronCompactDown className='mt-1 font-bold' id='show' />
+                                <BsChevronCompactUp className='hidden mt-1 font-bold' id='show' /></span>
                         </div>
                     </section>
                     <section className=' space-y-5 lg:space-y-0 flex flex-col lg:flex-row items-center lg:w-[1128px]  lg:py-5 px-5 lg:px-0 py-3  ' id="section4">
@@ -209,13 +211,13 @@ function Landing_page() {
                                 Let the right people know you'are open to work
                             </h3>
                             <p className='text-3xl font-thin'>
-                            With the Open To Work feature, you can privately tell recruiters or publicly share with the LinkedIn community that you are looking for new job opportunities.
+                                With the Open To Work feature, you can privately tell recruiters or publicly share with the LinkedIn community that you are looking for new job opportunities.
                             </p>
                         </div>
                         <div className='flex-1 w-full flex justify-center'>
-                           <img src={sec5} alt="" className='w-[75%]'/> 
+                            <img src={sec5} alt="" className='w-[75%]' />
                         </div>
-                        </section>
+                    </section>
                 </main>
 
                 <Footer />

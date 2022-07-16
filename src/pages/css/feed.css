@@ -1,0 +1,41 @@
+#p_flex_i{
+    display: none;
+}
+
+
+
+@media (max-width:790px) {
+    #h_main {
+        justify-content: space-between;
+        margin: 0 1rem;
+    }
+    header{
+        padding: 2rem 0;
+    }
+
+    #search{
+        flex:0.6 ;
+    }
+    
+}
+
+
+
+@media (min-width:790px) {
+    #s_me , #noti{
+        display: none;
+    }    
+    #p_flex_i{
+        display: inline-flex;
+    }
+    #h_main {
+        justify-content: start;
+    }
+    #sea_ico{
+        display: inline;
+    }
+
+    #flex_icon>div>div{
+        cursor: pointer;
+    }
+}
