@@ -25,7 +25,8 @@
         
         cursor: pointer;
 
-    }    
+    }
+
 }
 
 
@@ -57,4 +58,7 @@
     #post{
         display: none;
     }
+    #flex1{
+        display: block;
+    }    
 }
