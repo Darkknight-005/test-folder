@@ -2,7 +2,7 @@
 
 
 
-@media (max-width:790px) {
+@media (max-width:828px) {
     #h_main {
         justify-content: space-between;
         margin: 0 1rem;
@@ -31,7 +31,7 @@
 
 
 
-@media (min-width:790px) {
+@media (min-width:828px) {
     #s_me , #noti{
         display: none;
         
