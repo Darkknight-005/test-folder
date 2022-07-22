@@ -90,7 +90,7 @@ function Feed() {
             Lorem ipsum dolor, sit amet consectetur adipisicing elit. Rerum quis sunt facilis error quidem earum reiciendis, laboriosam iure minima, maxime iste sequi omnis optio placeat ducimus dolorum vero voluptas! Explicabo consectetur aliquam natus recusandae minus ipsa, ad dicta rem nesciunt unde perferendis amet magni quam molestiae. Repellendus ex facere aliquam velit debitis tenetur quod atque vitae nemo dolores in cumque doloremque excepturi eum at ratione dolore aspernatur beatae ipsa minus voluptatum ducimus, nostrum illo libero. Sed ipsa quae minima incidunt officiis modi aperiam perspiciatis blanditiis consectetur sit qui expedita repellendus ducimus provident adipisci voluptatum, nemo temporibus nisi rerum nam eum!
           </p>
         </section>
-        <section className='flex-1 mx-7  text-justify'>
+        <section className='flex-1  text-justify' id="flex2">
           <h1 className='text-2xl text-green-200 font-serif text-center'>
             This is Second section
           </h1>

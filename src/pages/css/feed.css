@@ -61,4 +61,7 @@
     #flex1{
         display: block;
     }    
+    #flex2{
+        margin: 1.75rem ;
+    }
 }
