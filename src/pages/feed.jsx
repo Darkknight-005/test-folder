@@ -78,7 +78,7 @@ function Feed() {
           </div>
         </div>
       </header>
-      <main className='min-h-[80vh] flex justify-center gap-2 mt-2  lg:px-0 px-4'>
+      <main className='min-h-[85vh] flex justify-center gap-2 mt-2  lg:px-0 px-4'>
 
         <div className='lg:w-[1028px] flex justify-evenly '>
 
