@@ -78,7 +78,7 @@ function Feed() {
           </div>
         </div>
       </header>
-      <main className='min-h-[100vh] flex justify-center gap-2 mt-2  lg:px-0 px-4'>
+      <main className='min-h-[80vh] flex justify-center gap-2 mt-2  lg:px-0 px-4'>
 
         <div className='lg:w-[1028px] flex justify-evenly '>
 
@@ -109,7 +109,7 @@ function Feed() {
         </div>
       </main>
 
-      <nav id='mobile_nav' className='backdrop-blur-lg bg-black/70 flex-1 flex justify-evenly py-[6px] sticky bottom-0 z-10'>
+      <nav id='mobile_nav' className='backdrop-blur-lg w-full bg-black/70 flex-1 flex justify-evenly py-[6px] fixed bottom-0 z-10'>
         <div className='flex space-x-3 flex-1  justify-evenly text-gray-400' id='nav_i'>
 
           <div className='flex flex-col items-center   py-1 '>
