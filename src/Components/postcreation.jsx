@@ -5,7 +5,7 @@ import "./postcreation.css"
 function PostCreation() {
   return (
     <div className=' items-center justify-center hidden bg-black/60 absolute w-full h-full top-0 z-20' id="postcr">
-      <div className='bg-gray-400 w-1/3 h-2/3 rounded-md'>
+      <div className='bg-gray-400  rounded-md'>
         <div className='flex items-center justify-between rounded-t-md shadow-xl px-4'>
           <h2 className='text-xl pl-6 py-2'>Create Post</h2>
           <div className='p-1 cursor-pointer hover:bg-gray-500/60 rounded-lg'>
