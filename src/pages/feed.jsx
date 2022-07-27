@@ -265,7 +265,7 @@ function Feed() {
             <MdPeopleAlt className='text-2xl' />
             {/* <span className='text-sm '>My Network</span> */}
           </div>
-          <div className='flex flex-col items-center  py-1 ' id="post">
+          <div className='flex flex-col items-center  py-1 ' id="post" onClick={()=>{document.getElementById("postcr").style.display = "flex"}}>
             <MdOutlineAddCircle className='text-2xl' />
           </div>
           <div className='flex flex-col items-center  py-1 '>
