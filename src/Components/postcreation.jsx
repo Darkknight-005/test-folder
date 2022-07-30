@@ -21,7 +21,7 @@ function PostCreation() {
             <p className='text-sm pl-1'>Everyone</p>
           </div>
         </div>
-        <div className="px-5 w-full max-w-[23rem] sm:max-w-[40rem] overflow-y-scroll  my-2  " id="scroll" >
+        <div className="px-5 w-96 sm:max-w-[40rem] overflow-y-scroll  my-2  " id="scroll" >
           <div contentEditable placeholder='Write something here..' className=' text-start' id='write'>
 
           </div>
