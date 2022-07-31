@@ -15,7 +15,6 @@ import PostCreation from '../Components/postcreation'
 
 
 function Feed() {
-  // const sear = document.getElementById("search");
 
 
   return (
