@@ -13,7 +13,7 @@ import { RiArticleFill } from 'react-icons/ri'
 import { Link } from 'react-router-dom'
 import PostCreation from '../Components/postcreation'
 import {db, postSnap } from '../firebase'
-import { collection, onSnapshot, query } from 'firebase/firestore'
+import { collection, onSnapshot, query, orderBy } from 'firebase/firestore'
 
 
 function Feed() {
@@ -21,7 +21,7 @@ function Feed() {
   const [posts, setPosts] = useState([])
 
   useEffect(() => {
-    const q = query(collection(db, 'posts'))
+    const q = query(collection(db, 'posts'), orderBy('TimeStamp','desc'))
     const dataRef = onSnapshot(q, (querySnapshot) => {
       const dataArr = []
       querySnapshot.forEach((doc) => {
