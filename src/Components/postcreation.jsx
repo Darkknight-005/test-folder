@@ -1,30 +1,28 @@
+import { collection, doc, serverTimestamp, setDoc } from 'firebase/firestore'
 import React from 'react'
 import { MdOutlineClose } from 'react-icons/md'
-import { db } from '../pages/firebase'
+import { db} from '../firebase'
 import "./postcreation.css"
-import firebase from 'firebase/compat/app';
 
 function PostCreation() {
   // const [input, setInput] = useState("")
 
   
   
-  const sendpost = ()=>{
+  const sendpost =()=>{
     const spost = document.getElementById("write")
 
-        const msage = spost.textContent
-
-    db.collection("posts").add({
-        name:"Dark knight",
-        description:"test this",
-        message:msage ,
-        photo:"",
-        timestamp:firebase.firestore.FieldValue.serverTimestamp(),
-      }
-    );
+    const colRef = collection(db, "posts")
+    setDoc(doc(colRef),{
+      Name: 'Dark knight',
+      Description: new Date(),
+      Message: spost.textContent,
+      TimeStamp: serverTimestamp()
+    })
+        
     spost.textContent = ''
-    msage = ''
 
+    document.getElementById("postcr").style.display = "none"
   }
   
   
@@ -43,7 +41,7 @@ function PostCreation() {
 
             <img src="https://media-exp1.licdn.com/dms/image/C4E03AQFqS7SnCri3MA/profile-displayphoto-shrink_100_100/0/1606680593180?e=1663804800&v=beta&t=6TMTBuylelaAsFJ7lgffXLRMfsn_LydJ-L15AlzYxT0" alt="" className=' h-12 w-12 rounded-full  shadow-xl  shadow-white/50' />
             <div className='-space-y-1'>
-              <h2 className=' '>Dark knight</h2>
+              <h2 id="name">Dark knight</h2>
               <p className=' pl-1'>Everyone</p>
             </div>
           </div>

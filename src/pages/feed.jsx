@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import './css/feed.css'
 import { BsBookmarkStarFill, BsCalendar2EventFill, BsFillEmojiHeartEyesFill, BsFillHeartFill, BsJournalRichtext, BsPlayBtnFill, BsSearch, BsShare } from 'react-icons/bs'
 import { GiLinkedRings } from 'react-icons/gi'
@@ -12,9 +12,27 @@ import { RiArticleFill } from 'react-icons/ri'
 
 import { Link } from 'react-router-dom'
 import PostCreation from '../Components/postcreation'
+import {db, postSnap } from '../firebase'
+import { collection, onSnapshot, query } from 'firebase/firestore'
 
 
 function Feed() {
+
+  const [posts, setPosts] = useState([])
+
+  useEffect(() => {
+    const q = query(collection(db, 'posts'))
+    const dataRef = onSnapshot(q, (querySnapshot) => {
+      const dataArr = []
+      querySnapshot.forEach((doc) => {
+        dataArr.push({ ...doc.data(), id: doc.id })
+      })
+      setPosts(dataArr)
+    })
+  
+  
+    return () => dataRef()
+  }, [])
 
 
   return (
@@ -179,70 +197,16 @@ function Feed() {
             </div>
 
 
-            <div className='bg-white my-3 p-4 rounded-lg'>
-              <div className='flex mb-2 gap-2'>
-                <img src="https://media-exp1.licdn.com/dms/image/C4E03AQFqS7SnCri3MA/profile-displayphoto-shrink_100_100/0/1606680593180?e=1663804800&v=beta&t=6TMTBuylelaAsFJ7lgffXLRMfsn_LydJ-L15AlzYxT0" alt="" className=' h-12 w-12 rounded-full  shadow-xl  shadow-white/50' />
-                <div className='ml-2 flex flex-col -space-y-1'>
-                  <h2 className='font-semibold'>Dark knight</h2>
-                  <p className='text-xs text-gray-600'>description</p>
-                </div>
-              </div>
+            {posts.map((post, index)=>{
+             return <Timeline 
+              key={index}
+              name={post.Name} 
+              description={post.Description.toDate().toString()} 
+              message={post.Message}
+               />
+            })
+            }
 
-              <div>
-                <p>Message</p>
-
-              </div>
-              <div className='flex justify-between px-5 sm:px-10'>
-                <div className='flex  items-center gap-1  py-1 cursor-pointer '>
-                  <BsFillHeartFill className='text-xl text-red-500 ' />
-                  <span className='text-sm '>Like</span>
-                </div>
-                <div className='flex  items-center gap-1  py-1 cursor-pointer '>
-                  <FcComments className='text-xl text-purple-400' />
-                  <span className='text-sm '>Comment</span>
-                </div>
-                <div className='flex  items-center gap-1  py-1 cursor-pointer '>
-                  <BsShare className='text-lg' />
-                  <span className='text-sm '>Share</span>
-                </div>
-                <div className='flex  items-center gap-1  py-1 cursor-pointer '>
-                  <MdSend className='text-2xl text-blue-500' />
-                  <span className='text-sm '>Send</span>
-                </div>
-              </div>
-            </div>
-            <div className='bg-white my-3 p-4 rounded-lg'>
-              <div className='flex mb-2 gap-2'>
-                <img src="https://media-exp1.licdn.com/dms/image/C4E03AQFqS7SnCri3MA/profile-displayphoto-shrink_100_100/0/1606680593180?e=1663804800&v=beta&t=6TMTBuylelaAsFJ7lgffXLRMfsn_LydJ-L15AlzYxT0" alt="" className=' h-12 w-12 rounded-full  shadow-xl  shadow-white/50' />
-                <div className='ml-2 flex flex-col -space-y-1'>
-                  <h2 className='font-semibold'>Dark knight</h2>
-                  <p className='text-xs text-gray-600'>description</p>
-                </div>
-              </div>
-
-              <div>
-                <p>Message</p>
-
-              </div>
-              <div className='flex justify-between px-5 sm:px-10'>
-                <div className='flex  items-center gap-1  py-1 cursor-pointer '>
-                  <BsFillHeartFill className='text-xl text-red-500 ' />
-                  <span className='text-sm '>Like</span>
-                </div>
-                <div className='flex  items-center gap-1  py-1 cursor-pointer '>
-                  <FcComments className='text-xl text-purple-400' />
-                  <span className='text-sm '>Comment</span>
-                </div>
-                <div className='flex  items-center gap-1  py-1 cursor-pointer '>
-                  <BsShare className='text-lg' />
-                  <span className='text-sm '>Share</span>
-                </div>
-                <div className='flex  items-center gap-1  py-1 cursor-pointer '>
-                  <MdSend className='text-2xl text-blue-500' />
-                  <span className='text-sm '>Send</span>
-                </div>
-              </div>
-            </div>
           </section>
 <PostCreation />
 
@@ -284,3 +248,41 @@ function Feed() {
 }
 
 export default Feed
+
+
+function Timeline({name, description, message}) {
+  return (
+<div className='bg-white my-3 p-4 rounded-lg' >
+              <div className='flex mb-2 gap-2'>
+                <img src="https://media-exp1.licdn.com/dms/image/C4E03AQFqS7SnCri3MA/profile-displayphoto-shrink_100_100/0/1606680593180?e=1663804800&v=beta&t=6TMTBuylelaAsFJ7lgffXLRMfsn_LydJ-L15AlzYxT0" alt="" className=' h-12 w-12 rounded-full  shadow-xl  shadow-white/50' />
+                <div className='ml-2 flex flex-col -space-y-1'>
+                  <h2 className='font-semibold'>{name}</h2>
+                  <p className='text-xs text-gray-600'>{description}</p>
+                </div>
+              </div>
+
+              <div>
+                <p>{message}</p>
+
+              </div>
+              <div className='flex justify-between px-5 sm:px-10'>
+                <div className='flex  items-center gap-1  py-1 cursor-pointer '>
+                  <BsFillHeartFill className='text-xl text-red-500 ' />
+                  <span className='text-sm '>Like</span>
+                </div>
+                <div className='flex  items-center gap-1  py-1 cursor-pointer '>
+                  <FcComments className='text-xl text-purple-400' />
+                  <span className='text-sm '>Comment</span>
+                </div>
+                <div className='flex  items-center gap-1  py-1 cursor-pointer '>
+                  <BsShare className='text-lg' />
+                  <span className='text-sm '>Share</span>
+                </div>
+                <div className='flex  items-center gap-1  py-1 cursor-pointer '>
+                  <MdSend className='text-2xl text-blue-500' />
+                  <span className='text-sm '>Send</span>
+                </div>
+              </div>
+            </div>
+  )
+}
